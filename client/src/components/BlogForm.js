@@ -6,13 +6,13 @@ const BlogForm = (props) => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
-  const handleTitleChange = (e) => {
-    setTitle(e.target.value);
-  }
+  // const handleTitleChange = (e) => {
+  //   setTitle(e.target.value);
+  // }
 
-  const handleBodyChange = (e) => {
-    setBody(e.target.value);
-  }
+  // const handleBodyChange = (e) => {
+  //   setBody(e.target.value);
+  // }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,7 +32,7 @@ return (
             placeholder="Title"
             name="title"
             required
-            onChange={handleTitleChange}
+            onChange={(e) => setTitle(e.target.value)}
             value={title}
           />
           <Form.Input
@@ -40,7 +40,7 @@ return (
             placeholder="Body"
             name="body"
             required
-            onChange={handleBodyChange}
+            onChange={(e) => setBody(e.target.value)}
             value={body}
           />
         </Form.Group>

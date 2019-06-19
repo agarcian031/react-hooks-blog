@@ -21,6 +21,10 @@ const Blogs = (props) => {
   }, [])
 
 
+// const addBlog = (blog) => setBlogs([ ...blogs, blog, ]);
+
+
+
  const renderBlogs = () => {
     // const {blogs} = this.state; 
     return blogs.map(blog => 
@@ -35,7 +39,7 @@ const Blogs = (props) => {
      <>
         <Header as="h1" style={{padding: '20px 0'}}>My Blogs</Header>
         <br/>
-        {showForm && <BlogForm />}
+        {showForm && <BlogForm toggleForm={setShowForm} add={(blog) => setBlogs([ ...blogs, blog, ])} />}
         <Button onClick={() => setShowForm(!showForm)}>
           { showForm ? "Close Form" : "Show Form"}
         </Button>
