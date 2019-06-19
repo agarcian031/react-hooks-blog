@@ -3,6 +3,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import { Menu } from "semantic-ui-react";
 import { Link, withRouter } from "react-router-dom";
 
+// instead of passing in props: 
 const Navbar = ({history, location}) => {
   const { user, handleLogout } = useContext(AuthContext);
 
